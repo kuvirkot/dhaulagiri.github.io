@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,6 +22,11 @@
   <!-- Custom styles for this template -->
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ekko-lightbox.css">
+  <link rel="icon" href="/img/dhaulagiri32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/img/dhaulagiri16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="/favicon.ico">
+
 
 </head>
 
@@ -52,6 +58,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#budjet">Бюджет</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#album">Фотоальбом</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
@@ -100,7 +109,7 @@
                 <h3 class="display-4">Уважаемые любители гор и активного отдыха!</h3>
                 <p class="lead">Приглашаю Вас принять участие в экспедиции вокруг седьмого по высоте восьмитысячника планеты - гиганта Дхаулагири, которая состоится осенью, в период c 5 по 25 октября 2018 года.<span class="small text-muted"> (даты с учтём международного перелета из России в Россию)</span>.</p>
                 <hr class="my-4">
-                <p class="text-muted">Задать интересующие Вас вопросы и оформить зафивку на участие Вы можете непосредственно гиду и организатору экспедиции - Алексею Ульянову</p>
+                <p class="text-muted">Задать интересующие Вас вопросы и оформить заявку на участие Вы можете непосредственно гиду и организатору экспедиции - Алексею Ульянову</p>
                 <p class="lead">
                   <!-- <a class="btn btn-primary btn-lg" href="#" role="button">Задать вопрос</a> -->
                   <a class="btn btn-primary btn-lg js-scroll-trigger" href="#contact">Задать вопрос</a>
@@ -117,13 +126,13 @@
 
           
 
-          <p class="lead">Несмотря на удаленность от инфраструктуры основных путей региона Аннапурна, удобная логистика, условия посещения
+          <p class="lead">Несмотря на удаленность от инфраструктуры основных дорог региона Аннапурна, удобная логистика, режим посещения
             национального парка и особенности рельефа делают экспедиционный треккинг вокруг Дхаулагири относительно доступным
             во всех отношениях:
             <ul>
               <li>Удобная логистика позволяет быстро осуществить заброску и выезд из-под маршрута при любых погодных условиях
-                и не завязана так сильно на летные условия местной авиации, как например, регион Эверест.</li>
-              <li>Особенности рельефа позволяют осуществить плавный набор высоты и акклиматизации, преимущественно в зоне лесов,
+                и не зависит от лутных условия местной авиации, как например, регион Эверест.</li>
+              <li>Особенности рельефа позволяют осуществить плавный набор высоты и акклиматизацию, преимущественно в зоне лесов,
                 укрытой от ветра и непогоды, перед выходом на определяющий участок пути.</li>
             </ul>
           </p>
@@ -655,7 +664,37 @@
     </div>
   </section>
 
- 
+   <!-- Album Section -->
+   <section id="album" class="album-section content-section text-center">
+    <h2>Фотоальбом экспедиции "Вокруг Дхаулагири"</h2>
+
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="row">
+            <a href="img/album/rode-to-muna.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="img/album/rode-to-muna-400.jpg" class="img-fluid">
+            </a>
+            <a href="img/album/peasants-around-the-water-column-in-muri-village.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="img/album/peasants-around-the-water-column-in-muri-village-400.jpg" class="img-fluid">
+            </a>
+            <a href="img/album/camp-in-muri.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="img/album/camp-in-muri-400.jpg" class="img-fluid">
+            </a>
+        </div>
+        <div class="row">
+            <a href="img/album/myagdi-khola.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="img/album/myagdi-khola-400.jpg" class="img-fluid">
+            </a>
+            <a href="img/album/zig-zag-mountain-trail.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="img/album/zig-zag-mountain-trail-400.jpg" class="img-fluid">
+            </a>
+            <a href="img/album/little-boy-traveler.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4">
+                <img src="img/album/little-boy-traveler-400.jpg" class="img-fluid">
+            </a>
+        </div>
+    </div>
+</div>
+</section>
 
 
 
@@ -715,9 +754,6 @@
 
   </section>
 
-
- 
-
     <!-- Contact Section -->
     <section id="contact" class="contact-section content-section text-center">
       <div class="container">
@@ -774,6 +810,11 @@
     <!-- <script src="js/jquery.easing.min.js"></script> -->
     <script src="js/bs-modal-fullscreen.min.js"></script>
     <script src="js/grayscale.min.js"></script>
+    <script src="js/ekko-lightbox.min.js"></script>
+    <script>$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+  });</script>
 
     <!-- Bootstrap core JavaScript -->
 
